@@ -7,19 +7,6 @@ WORKDIR /app
 # 复制 package.json 和 package-lock.json（如果存在）
 COPY package*.json ./
 
-# 安装应用依赖
-RUN npm ci --only=production && npm cache clean --force
-
-# 复制应用源代码
-COPY . .
-
-# 创建非 root 用户
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-
-# 更改文件所有权
-RUN chown -R nextjs:nodejs /app
-USER nextjs
 
 # 暴露端口
 EXPOSE 3000
