@@ -1,0 +1,25 @@
+{
+  "name": "docker-acr-demo",
+  "version": "1.0.0",
+  "description": "A demo Node.js application for Docker build and push to Alibaba Cloud ACR",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "docker",
+    "acr",
+    "github-actions"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
